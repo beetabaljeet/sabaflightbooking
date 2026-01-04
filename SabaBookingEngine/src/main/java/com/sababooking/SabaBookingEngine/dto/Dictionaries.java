@@ -1,19 +1,30 @@
 
 package com.sababooking.SabaBookingEngine.dto;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
 
+
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
 
 import java.util.Map;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class Dictionaries {
-    private Map<String, Location> locations;
-    private Map<String, String> aircraft;
-    private Map<String, String> currencies;
-    private Map<String, String> carriers;
+
+        @JsonProperty("locations")
+        private Map<String, Location> locations;
+
+        @JsonProperty("aircraft")
+        private Map<String, String> aircraft;
+
+        @JsonProperty("currencies")
+        private Map<String, String> currencies;
+
+        @JsonProperty("carriers")
+        private Map<String, String> carriers;
 }

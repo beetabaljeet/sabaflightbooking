@@ -1,7 +1,6 @@
 package com.sababooking.SabaBookingEngine.service;
 
 import com.sababooking.SabaBookingEngine.dto.TokenResponse;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
 import com.sababooking.SabaBookingEngine.properties.AmadeusProperties;

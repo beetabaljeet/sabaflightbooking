@@ -25,13 +25,13 @@ public class AmadeusAuthController {
      */
     @GetMapping("/token")
     public Mono<ResponseEntity<TokenResponse>> getToken() {
-        System.out.print("************************************");
         return authService.getAccessToken()
                 .map(ResponseEntity::ok)
                 .onErrorResume(ex -> Mono.just(ResponseEntity
                         .status(502) // Bad Gateway (upstream failure)
                         .body(errorToken(ex))));
     }
+
 
     private TokenResponse errorToken(Throwable ex) {
         TokenResponse err = new TokenResponse();

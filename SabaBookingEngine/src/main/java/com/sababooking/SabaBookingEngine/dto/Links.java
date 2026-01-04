@@ -1,15 +1,17 @@
 
 package com.sababooking.SabaBookingEngine.dto;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
-
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
 
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class Links {
+
+    @JsonProperty("self")
     private String self;
 }
